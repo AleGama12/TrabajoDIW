@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>Empresas - Consultoría de Recursos Humanos</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary-custom {
+            background-color: #3958A2;
+            border: none;
+        }
+
+        .bg-primary-custom {
+            background-color: #3958A2;
+        }
+
+        .bg-secondary-custom {
+            background-color: #307499;
+        }
+
+        .text-accent {
+            color: #635CBB;
+        }
+
+        h2,
+        p {
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary-custom navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recursos Humanos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Empresas.html">Empresas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formularios.html">Formularios</a></li>
+                </ul>
+                <a href="Servicios.html#contactos" class="btn btn-outline-light ms-3">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundaria -->
+    <nav class="navbar navbar-expand-lg bg-secondary-custom navbar-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Gestión de Talento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios Corporativos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Consultoría</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="text-center my-5">
+        <h1>Colaboración con Empresas</h1>
+        <p>Transformamos la gestión del talento y las vacantes de empleo.</p>
+    </header>
+
+    <!-- Sección de Beneficios -->
+    <section id="benefits" class="container my-5">
+        <h2 class="text-center">Beneficios de Colaborar con Nosotros</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card benefit-card text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Publicación de Vacantes</h5>
+                        <p class="card-text">Publica tus vacantes y llega a una amplia base de candidatos calificados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card benefit-card text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Asesoría Personalizada</h5>
+                        <p class="card-text">Recibe apoyo de expertos en recursos humanos para mejorar tus procesos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card benefit-card text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestión Eficiente</h5>
+                        <p class="card-text">Optimiza la gestión de oportunidades laborales y postulaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Gestión de Vacantes -->
+    <section id="gestion-vacantes" class="container my-5 text-center">
+        <h2 class="text-center mb-4">Gestión de Vacantes de Empleo</h2>
+        <p>Nuestra consultoría permite a las empresas publicar sus vacantes de empleo, facilitando que los candidatos se postulen a diferentes ofertas. Gracias a nuestra plataforma, las vacantes pueden estar disponibles en varias empresas, optimizando la gestión de oportunidades laborales.</p>
+        <div class="text-center">
+            <a href="#contacto" class="btn btn-primary-custom">Publicar una Vacante</a>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto para Empresas -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Formulario de Contacto para Empresas</h2>
+        <div class="contact-form">
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="vacante" class="form-label">Descripción de la Vacante</label>
+                    <textarea class="form-control" id="vacante" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary-custom">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="position-fixed bottom-0 end-0 p-3">
+        <a href="#top" class="btn btn-black">
+            <i class="bi bi-arrow-up-circle fs-1"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center p-3 mt-5 bg-secondary-custom">
+        <p>&copy; 2024 Recursos Humanos. Todos los derechos reservados.</p>
+        <div>
+            <p>¿Por qué elegirnos?</p>
+            <span class="badge bg-primary">Experiencia</span>
+            <span class="badge bg-success">Certificación</span>
+            <span class="badge bg-info">Soporte 24/7</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

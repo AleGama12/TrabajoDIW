@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>Formularios - Consultoría de Recursos Humanos</title>
+    <style>
+        /* Aumentar tamaño de los navbars */
+        /* Personalizar formulario de candidatos */
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        .form-label {
+            font-size: 1.2rem;
+        }
+
+        /* Centrado del formulario */
+        .form-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 150px;
+            /* Centrado vertical */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg bg-primary-custom navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Recursos Humanos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Empresas.html">Empresas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formularios.html">Formularios</a></li>
+                </ul>
+                <a href="Servicios.html#contactos" class="btn btn-outline-light ms-3">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGestión"
+                aria-controls="navbarGestión" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarGestión">
+                <ul class="navbar-nav">
+                    <!-- Dropdown de Vacantes -->
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" id="vacantesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vacantes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vacantesDropdown">
+                            <li><a class="dropdown-item" href="#" id="mnuAltaVacante">Alta Vacante</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBuscarVacante">Buscar Vacante</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBorrarVacante">Borrar Vacante</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoVacante">Listado Vacantes</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoParametrizadoVacantes">Listado
+                                    Parametrizado</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoPorEmpresa">Listado por Empresa</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown de Candidatos -->
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" id="candidatosDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Candidatos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="candidatosDropdown">
+                            <li><a class="dropdown-item" href="#" id="mnuAltaCandidato">Alta Candidato</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBuscarCandidato">Buscar Candidato</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBorrarCandidato">Borrar Candidato</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoCandidato">Listado Candidatos</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoParametrizado">Listado Parametrizado</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown de Empresas -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" id="empresasDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Empresas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="empresasDropdown">
+                            <li><a class="dropdown-item" href="#" id="mnuAltaEmpresa">Alta Empresa</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBuscarEmpresa">Buscar Empresa</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuBorrarEmpresa">Borrar Empresa</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoEmpresa">Listado Empresas</a></li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoParametrizado">Listado Parametrizado</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="mnuListadoPorCandidatoEmpresa">Listado por
+                                    Candidato</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formularios -->
+    <div class="form-container">
+        <!-- Formulario Alta Candidato -->
+        <div id="frmCandidato">
+            <form id="frmAltaCandidato" class="d-none">
+                <legend>Formulario de Alta Candidato</legend>
+                <div class="mb-4">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre del Candidato">
+                </div>
+                <div class="mb-3">
+                    <label for="experiencia" class="form-label">Experiencia</label>
+                    <input type="text" id="experiencia" class="form-control" placeholder="Años de experiencia">
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" id="direccion" class="form-control" placeholder="Direccion">
+                </div>
+                <div class="mb-3">
+                    <label for="contacto" class="form-label">Contacto</label>
+                    <input type="text" id="contacto" class="form-control" placeholder="Correo o Teléfono">
+                </div>
+                <button type="button" class="btn btn-primary" id="btnAltaCandidato">Registrar Candidato</button>
+            </form>
+        </div>
+
+        <!-- Formulario Modificar Candidato -->
+        <div id="divModificarCandidato">
+            <form id="frmModificarCandidato" name="frmModificarCandidato" class="d-none">
+                <legend>Formulario Modificacion de Candidato</legend>
+                <div class="mb-4">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="ModnombreCandidato" class="form-control" placeholder="Nombre del Candidato">
+                </div>
+                <div class="mb-3">
+                    <label for="experiencia" class="form-label">Experiencia</label>
+                    <input type="text" id="ModexperienciaCandidato" class="form-control" placeholder="Años de experiencia">
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" id="ModdireccionCandidato" class="form-control" placeholder="Direccion">
+                </div>
+                <div class="mb-3">
+                    <label for="contacto" class="form-label">Contacto</label>
+                    <input type="text" id="ModcontactoCandidado" class="form-control" placeholder="Correo o Teléfono">
+                </div>
+                <button type="button" class="btn btn-primary" id="btnModificarCandidato">Modificar Candidato</button>
+            </form>
+        </div>
+
+        <!--listar los candidatos-->
+        <div id="divListadoCandidatos">
+            <form name="frmListadoCandidatos" id="frmListadoCandidatos" role="form" class="d-none">
+                <div class="row mb-3">
+                    <h2>Lista Candidatos</h2>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-2"></div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary" name="btnListadoCandidatos"
+                            id="btnListadoCandidatos" value="Listado de los candidatos">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--listar los candidatos PARAMETRIZADOS-->
+        <div id="divListadoCandidatosParam">
+            <form name="frmListadoCandidatosParam" id="frmListadoCandidatosParam" role="form" class="d-none">
+                <div class="row mb-3">
+                    <h2 style="font-size: 36px;">Lista Candidatos por experiencia</h2>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-12 d-flex align-items-center">
+                        <!-- Usamos flexbox para poner los elementos en una línea -->
+                        <label for="txtExperiencia" class="me-2">Experiencia minima:</label>
+                        <!-- me-2 agrega un margen a la derecha -->
+                        <input type="text" id="txtExperiencia" name="txtExperiencia" placeholder="Experiencia minima"
+                            required class="me-2">
+                        <input type="button" name="btnListadoCandidatosParam" id="btnListadoCandidatosParam"
+                            value="Listado de los candidatos">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--borrar candidato-->
+        <div id="divfrmBorrarCandidato">
+            <form id="frmBorrarCandidato" class="d-none">
+                <h2>Borrar Candidato</h2>
+                <label for="txtId">Id a borrar:</label>
+                <input type="text" id="txtId" name="txtId" required>
+                <button type="button" class="btn btn-primary" id="btnBorrarCandidato">Borrar</button>
+            </form>
+        </div>
+
+        <!--Busqueda de candidatos-->
+        <div id="divfrmBuscarCandidato">
+            <form id="frmBuscarCandidato" class="d-none">
+                <h2>Buscar Candidato</h2>
+                <label for="txtId">Id del candidato:</label>
+                <input type="text" id="txtId" name="txtId" required>
+                <button type="button" class="btn btn-primary" id="btnBuscarCandidato">Buscar</button>
+                <div id="resultadoBusqueda"></div>
+            </form>
+        </div>
+
+        <!--Formulario alta Empresa-->
+        <div id="frmEmpresa">
+            <form id="frmAltaEmpresa" class="d-none">
+                <legend>Formulario de Nuevas Empresas</legend>
+                <div class="mb-3">
+                    <label for="nombre-empresa" class="form-label">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombre-empresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="sector-empresa" class="form-label">Sector de la empresa</label>
+                    <input type="text" class="form-control" id="sector-empresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="ubicacion-empresa" class="form-label">Ubicacion de la empresa</label>
+                    <textarea class="form-control" id="ubicacion-empresa" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="email-empresa" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email-empresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono-empresa" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono-empresa" required>
+                </div>
+                <button type="submit" id="btnAltaEmpresas" class="btn btn-primary-custom">Guardar Empresa</button>
+            </form>
+        </div>
+        <!-- Formulario Modificar Empresa-->
+         <div id="divfrmModificarEmpresa">
+            <form id="frmModificarEmpresa" name="frmModificarEmpresa" class="d-none">
+                <legend>Formulario de Modificacion de Empresas</legend>
+                <div class="mb-3">
+                    <label for="nombre-empresa-mod" class="form-label">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="modnombreEmpresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="sector-empresa-mod" class="form-label">Sector de la empresa</label>
+                    <input type="text" class="form-control" id="modsectorEmpresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="ubicacion-empresa-mod" class="form-label">Ubicacion de la empresa</label>
+                    <textarea class="form-control" id="modubicacionEmpresa" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                    <label for="email-empresa-mod" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="modemailEmpresa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono-empresa-mod" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="modtelefonoEmpresa" required>
+                </div>
+                <button type="submit" id="btnModificarEmpresas" class="btn btn-primary-custom">Modificar Empresa</button>
+            </form>
+        </div>
+                    
+
+        <!-- Listar todas las empresas-->
+        <div id="divListadoEmpresa">
+            <form name="frmListadoEmpresa" id="frmListadoEmpresa" role="frm" class="d-none">
+                <div class="row mb-3">
+                    <h2>Lista Empresas</h2>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"></div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary" name="btnListadoEmpresas" id="btnListadoEmpresa"
+                            value="Listado de las empresas">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Borrar Empresa-->
+        <div id="divfrmBorrarEmpresa">
+            <form id="frmBorrarEmpresa" class="d-none">
+                <h2>Borrar Empresa</h2>
+                <label for="txtIdEmpresa">Id a borrar:</label>
+                <input type="text" id="txtIdEmpresa" name="txtIdEmpresa" required>
+                <button type="button" class="btn btn-primary" id="btnBorrarEmpresa">Borrar</button>
+            </form>
+        </div>
+
+        <!-- Busqueda de Empresas-->
+        <div id="divfrmBuscarEmpresa">
+            <form id="frmBuscarEmpresa" class="d-none">
+                <h2>Buscar Empresa</h2>
+                <label for="txtIdEmpresa">Id de la empresa:</label>
+                <input type="text" id="txtIdEmpresa" name="txtIdEmpresa" required>
+                <button type="button" id="btnBuscarEmpresa">Buscar</button>
+                <div id="resultadoBusquedaEmpresa"></div>
+            </form>
+        </div>
+
+        <!--Formulario alta Vacante-->
+        <div id="frmVacante">
+            <form id="frmAltaVacante" class="d-none">
+                <legend>Formulario de nuevas vacantes</legend>
+                <div class="mb-3">
+                    <label for="id-vacante" class="form-label">ID Vacante</label>
+                    <input type="text" class="form-control" id="id-vacante" required>
+                </div>
+                <div class="mb-3">
+                    <label for="puesto-vacante" class="form-label">Puesto de la vacante</label>
+                    <input type="text" class="form-control" id="puesto-vacante" required>
+                </div>
+                <div class="mb-3">
+                    <label for="requisitos-vacante" class="form-label">Requisitos</label>
+                    <textarea class="form-control" id="requisitos-vacante" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tipoContrato-vacante" class="form-label">Tipo del contrato</label>
+                    <input type="text" class="form-control" id="tipoContrato-vacante" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id-empresa" class="form-label">ID Empresa</label>
+                    <input type="text" class="form-control" id="id-empresa" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary-custom">Guardar Vacante</button>
+            </form>
+        </div>
+
+        <!-- Listar todas las vacantes-->
+        <div id="divListadoVacante">
+            <form name="frmListadoVacante" id="frmListadoVacante" role="frm" class="d-none">
+                <div class="row mb-3">
+                    <h2>Lista Vacantes</h2>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2"></div>
+                    <div class="col-3">
+                        <input type="button" class="btn btn-primary" name="btnListadoVacante" id="btnListadoVacante"
+                            value="Listado de las vacantes">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Borrar Vacante-->
+        <div id="divfrmBorrarVacante">
+            <form id="frmBorrarVacante" class="d-none">
+                <h2>Borrar Vacante</h2>
+                <label for="txtIdVacante">Id a borrar:</label>
+                <input type="text" id="txtIdVacante" name="txtIdVacante" required>
+                <button type="button" class="btn btn-primary" id="btnBorrarVacante">Borrar</button>
+            </form>
+        </div>
+        <!-- Busqueda de Vacantes-->
+
+        <div id="divfrmBuscarVacante">
+            <form id="frmBuscarVacante" class="d-none">
+                <h2>Buscar Vacante</h2>
+                <label for="txtIdVacante">Id de la vacante:</label>
+                <input type="text" id="txtIdVacante" name="txtIdVacante" required>
+                <button type="button" id="btnBuscarVacante">Buscar</button>
+                <div id="resultadoBusquedaVacante"></div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/objetos.js"></script> <!-- Aquí se incluye Axios para las peticiones AJAX -->
+    <script src="js/codigo.js"></script> <!-- Aquí debes incluir el archivo JS que contiene tu lógica -->
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>Consultoría de Recursos Humanos</title>
+    <style>
+        header {
+            background: url('https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg') no-repeat center center/cover;
+            color: white;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Container Animation */
+        .animated-container {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Card Animation */
+        .card {
+            border: none;
+            transition: transform 0.3s;
+            animation: cardFadeIn 0.6s ease-in;
+            opacity: 0;
+        }
+
+        .card.appear {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Carousel Item Animation */
+        .carousel-item {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .accordion-body {
+            width: 30%;
+            min-width: 300px;
+            margin: auto;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+
+        h2,
+        h5 {
+            font-family: 'Courier New', monospace;
+        }
+
+        .bg-primary-custom {
+            background-color: #3958A2;
+        }
+
+        .bg-secondary-custom {
+            background-color: #307499;
+        }
+
+        .text-accent {
+            color: #635CBB;
+        }
+
+        .card {
+            height: 28%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg bg-primary-custom navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recursos Humanos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Empresas.html">Empresas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formularios.html">Formularios</a></li>
+                    <form class="d-flex ms-3">
+                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-secondary-custom ms-2" type="submit">
+                            <i class="bi bi-binoculars-fill"></i>
+                        </button>
+                    </form>
+                    <a href="Servicios.html#contactos" class="btn btn-outline-light ms-3">Contáctanos</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundaria -->
+    <nav class="navbar navbar-expand-lg bg-secondary-custom navbar-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Gestión de Talento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios Corporativos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Consultoría</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container animated-container">
+            <h1 class="display-4">Bienvenido a Nuestra Consultoría de Recursos Humanos</h1>
+            <p class="lead">Conectamos talento con oportunidades</p>
+            <a href="#beneficios" class="btn btn-light btn-lg">Descubre nuestros beneficios</a>
+        </div>
+    </header>
+
+    <!-- Sección de Beneficios de la Consultoría -->
+    <section id="recursos-humanos" class="container my-5 animated-container">
+        <h2 class="text-center mb-4">Tendencias y Metodologías en Recursos Humanos</h2>
+        <div class="row">
+            <!-- Tendencias en Recursos Humanos -->
+            <div class="col-md-6 mb-4">
+                <h3 class="text-center">Tendencias en Recursos Humanos</h3>
+                <div class="card shadow appear">
+                    <div class="card-body">
+                        <h5 class="card-title">Trabajo Híbrido</h5>
+                        <p class="card-text">Las empresas están adoptando modelos de trabajo híbrido, combinando el trabajo remoto y presencial para mejorar la productividad y la satisfacción de los empleados.</p>
+                    </div>
+                </div>
+                <div class="card shadow appear mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bienestar Integral</h5>
+                        <p class="card-text">Se está priorizando el bienestar físico, mental y emocional de los empleados, implementando programas de salud y bienestar.</p>
+                    </div>
+                </div>
+                <div class="card shadow appear mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Tecnología en Recursos Humanos</h5>
+                        <p class="card-text">Las herramientas de inteligencia artificial y analítica están transformando la manera en que se gestionan los recursos humanos, optimizando procesos y mejorando la toma de decisiones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuestras Metodologías -->
+            <div class="col-md-6 mb-4">
+                <h3 class="text-center">Nuestras Metodologías</h3>
+                <div class="card shadow appear">
+                    <div class="card-body">
+                        <h5 class="card-title">Enfoque por Competencias</h5>
+                        <p class="card-text">Implementamos un enfoque basado en competencias para identificar y desarrollar el talento en tu organización, alineando habilidades con los objetivos empresariales.</p>
+                    </div>
+                </div>
+                <div class="card shadow appear mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestión del Cambio</h5>
+                        <p class="card-text">Nuestra metodología incluye estrategias para gestionar el cambio organizacional de manera efectiva, minimizando la resistencia y asegurando una transición fluida.</p>
+                    </div>
+                </div>
+                <div class="card shadow appear mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Feedback Continuo</h5>
+                        <p class="card-text">Fomentamos una cultura de feedback continuo para mejorar el desempeño y la satisfacción de los empleados, implementando sistemas de evaluación periódicos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="container mt-5 text-center">
+        <h2 class="text-primary">Testimonios de Clientes</h2>
+        <div id="CarruselTestimonios" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="h5">"Excelente servicio, logramos encontrar al candidato perfecto para nuestra empresa."</p>
+                    <footer>- Cliente Satisfecho</footer>
+                </div>
+                <div class="carousel-item">
+                    <p class="h5">"La capacitación que recibimos fue clave para el desarrollo de nuestro equipo."</p>
+                    <footer>- Empresa Innovadora</footer>
+                </div>
+                <div class="carousel-item">
+                    <p class="h5">"Su asesoría en recursos humanos transformó nuestra cultura organizacional."</p>
+                    <footer>- Gerente de Proyecto</footer>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarruselTestimonios" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#CarruselTestimonios" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center p-3 mt-5 bg-secondary-custom">
+        <p>&copy; 2024 Consultoría de Recursos Humanos. Todos los derechos reservados.</p>
+        <div>
+            <p>¿Por qué elegirnos?</p>
+            <span class="badge bg-primary">Experiencia</span>
+            <span class="badge bg-success">Certificación</span>
+            <span class="badge bg-info">Soporte 24/7</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
